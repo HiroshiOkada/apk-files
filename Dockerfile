@@ -5,6 +5,7 @@ WORKDIR /root
 ADD ./make_apk_list*.sh ./entrypoint.sh /
 
 RUN chmod +x /make_apk_list*.sh /entrypoint.sh &&\
+    sync &&\
     /make_apk_list1.sh 
 
 RUN /make_apk_list2.sh package_names0 &\
