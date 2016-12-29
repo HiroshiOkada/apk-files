@@ -15,5 +15,7 @@ RUN /make_apk_list2.sh package_names0 &\
     /make_apk_list2.sh package_names4 &\
     wait
 
+RUN rm /make_apk_list*.sh /var/cache/apk/*
+
 ENTRYPOINT ["/entrypoint.sh"]
 
